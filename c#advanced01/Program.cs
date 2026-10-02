@@ -219,6 +219,56 @@ namespace c_advanced01
         */
 
             #endregion
+            #region Q15
+            /*
+        Q15: What is covariance? Explain the out keyword.
+            allows a generic type to use a more derived type where a base type is expected.
+            It is represented by the out keyword,anything out like return type of a method can be covariant.
+            */
+            #endregion
+            #region Q16
+            /*
+        Q16: What is contravariance? Explain the in keyword.
+            allows a generic type to use a base type where a more derived type is expected.
+            It is represented by the in keyword, anything in like parameter type of a method can be contravariant.
+                */
+            #endregion
+            #region Q17
+            /*
+             Q17: What is the difference between covariance and contravariance?
+            Covariance: works with types that are returned/produced.(out)
+            Contravariance: works with types that are passed as parameters.(in)
+             */
+            #endregion
+            #region Q18
+            /*
+             Q18: How do static members work in generic types?
+            Static members in a generic class are created separately for each closed generic type.
+            */
+            #endregion
+            #region Q19
+            /*
+             Q19: How can you inherit from a generic class?
+            A class can inherit from a generic class by specifying the generic type.
+            */
+            #endregion
+            #region Q20
+            Cache<string, string> cache = new Cache<string, string>();
+
+            cache.Add(
+                "name",
+                "Mohamed",
+                TimeSpan.FromSeconds(10)
+            );
+
+            Console.WriteLine(cache.Contains("name"));
+
+            Console.WriteLine(cache.Get("name"));
+
+            cache.Remove("name");
+
+            Console.WriteLine(cache.Contains("name"));
+            #endregion
         }
     }
 }
